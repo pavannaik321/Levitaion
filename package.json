@@ -1,0 +1,15 @@
+{
+  "name": "levitaion",
+  "version": "1.0.0",
+  "description": "create a user-friendly Invoice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "Levitaion"
+  },
+  "author": "pavan",
+  "license": "ISC"
+}
