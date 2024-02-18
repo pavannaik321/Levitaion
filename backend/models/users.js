@@ -15,6 +15,20 @@ const UsersSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  products: [
+    {
+      product: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Products",
+        required: true,
+      },
+      quantity: {
+        type: Number,
+        required: true,
+        default: 1,
+      },
+    },
+  ],
 });
 
 UsersSchema.methods.generateAuthToken = function () {

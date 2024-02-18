@@ -1,7 +1,12 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
+
+interface LoginResponse {
+  error?: string;
+  // Add any other properties you expect in the response
+}
 
 const Login = () => {
     const navigate = useNavigate()
@@ -14,14 +19,15 @@ const Login = () => {
         e.preventDefault()
         const { email, password } = data;
         try {
-            const { data } = await axios.post('/login', {
+            const { data: Userdata } = await axios.post<LoginResponse>('/login', {
                 email,
                 password
             })
-            if (data.error) {
-                toast.error(data.error);
+            if (Userdata.error) {
+                toast.error(Userdata.error);
             }
             else {
+                // console.log(Userdata)
                 setData({
                     "email": '',
                     "password" : ''
@@ -30,7 +36,7 @@ const Login = () => {
                 navigate('/')
             }
         } catch (error) {
-            
+            toast.error("There was some problem while logging")
         }
     }
   return (

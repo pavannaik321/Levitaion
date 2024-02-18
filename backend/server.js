@@ -16,23 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // app.use(cors());
 
-// // create products
-// const newProducts = new Products({
-//   product_name: "body wise",
-//   product_rate: 199,
-// });
-
-// // save the user to database
-// newProducts
-//   .save()
-//   .then((user) => {
-//     console.log("user created");
-//   })
-//   .catch((error) => {
-//     console.log("error : ", error);
-//   });
-
 app.use("/", require("./routes/authRout"));
+app.use("/product", require("./routes/productRout"));
+app.use("/invoice", require("./routes/invoiceRout"));
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`server is listning on port ${port}`);
