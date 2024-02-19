@@ -39,6 +39,7 @@ const ProductDetails = () => {
   const [sum, setSum] = useState<number | null>(null);
   const [gtotal, setGtotal] = useState<number | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isLoadingTotal, setILoadingTotal] = useState(true);
   const navigate = useNavigate();
   const currentDate = new Date();
   const futureDate = new Date(
@@ -179,7 +180,7 @@ const ProductDetails = () => {
             </div>
 
             {/* total table */}
-            {sum !== null && gtotal !== null ? (
+            {sum !== null && gtotal !== null && !isLoadingTotal  ? (
               <div className="flex flex-col md:flex-row justify-end pr-5 md:pr-10">
                 <table>
                   <tbody>
