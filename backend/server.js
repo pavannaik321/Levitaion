@@ -28,7 +28,7 @@ app.get("/",(req,res)=>{
 });
 app.use("/product", require("./routes/productRout"));
 app.use("/invoice", require("./routes/invoiceRout"));
-const port =  3001;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`server is listning on port ${port}`);
 });
