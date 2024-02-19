@@ -1,6 +1,6 @@
 # Invoice Generator Application
 
-This application is a user-friendly Invoice Generator that allows users to create and download invoices in PDF format.
+This application is a user-friendly and user can select product and download the invoice of the price.
 
 ## Installation
 
@@ -10,24 +10,41 @@ This application is a user-friendly Invoice Generator that allows users to creat
    
    git clone https://github.com/pavannaik321/Levitaion.git
 
-##  Navigate to the project directory:
-   cd invoice-generator
+### Setup Frontend
+
+##  Navigate to Frontend directory:
+   `cd frontend`
+   
 ## Install dependencies:
-   npm install
+   `npm install`
+   
 ## Start the development server:
-   npm run dev
+   `npm run dev`
+
+### Setup Backend
+
+##  Navigate to backend directory:
+   `cd backend`
+   
+## Install dependencies:
+   `npm install`
+   
+## Start the development server:
+   `npm run dev`
 
 
 ## Usage
-1. Open your web browser and navigate to http://localhost:3000.
-2. Fill in the invoice details (e.g., customer name, items, total amount).
-3. Click the "Generate Invoice" button to create the invoice.
-4. Click the "Download PDF" button to download the invoice in PDF format.
+1. Open your web browser and navigate to http://localhost:5173/register.
+2. Register to create new account.
+3. Login into your account.
+4. In home page you will see the list of products with there price you can choose and add to cart.
+5. Go to invoice page and see your total amount with gst.
+6. Click the "Download PDF" button to download the invoice in PDF format.
 
-Configuration
+### Configuration
 No additional configuration is required for this application.
 
-Credits
+### Credits
 *Tailwind CSS
 *Vite
 *jsPDF
