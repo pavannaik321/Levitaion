@@ -16,7 +16,6 @@ router.use(
     methods:["POST","GET","PUT"],
   })
 );
-
 router.get("/", test);
 router.post("/register", registerUser);
 router.post("/login", loginUser);
