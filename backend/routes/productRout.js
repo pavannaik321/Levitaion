@@ -9,7 +9,7 @@ const {
 router.use(
   cors({
     credentials: true,
-    origin: [""],
+    origin: ["https://levitaion-frontend.vercel.app/"],
     methods:["POST","GET","PUT"],
   })
 );
