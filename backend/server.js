@@ -24,7 +24,7 @@ app.use(express.urlencoded({ extended: false }));
 
 
 app.get("/",(req,res)=>{
-	res.json("hello");
+	res.send("hello");
 });
 app.use("/product", require("./routes/productRout"));
 app.use("/invoice", require("./routes/invoiceRout"));
