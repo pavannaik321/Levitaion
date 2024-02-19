@@ -23,7 +23,9 @@ app.use(express.urlencoded({ extended: false }));
 
 
 
-app.use("/", require("./routes/authRout"));
+app.get("/",(req,res)=>{
+	res.json("hello");
+});
 app.use("/product", require("./routes/productRout"));
 app.use("/invoice", require("./routes/invoiceRout"));
 const port = process.env.PORT || 3000;
