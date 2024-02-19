@@ -4,6 +4,7 @@ const cors = require("cors");
 const { InvoiceDetails } = require("../controllers/InvoiceController");
 
 // middleware
+router.use(
   cors({
     credentials: true,
     origin: ["https://deploy-mern-1whq.vercel.app"],
