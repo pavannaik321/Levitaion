@@ -38,7 +38,6 @@ const ProductDetails = () => {
   const [data, setData] = useState<userproduct | null>(null);
   const [sum, setSum] = useState<number | null>(null);
   const [gtotal, setGtotal] = useState<number | null>(null);
-  const [isLoadingTotal, setILoadingTotal] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
   const currentDate = new Date();
