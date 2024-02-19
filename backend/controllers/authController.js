@@ -92,7 +92,7 @@ const loginUser = async (req, res) => {
     // generate JWT token
     jwt.sign(
       { email: user.email, id: user._id, name: user.name },
-      process.env.JWT_SECRET,
+      "12345677pavanan"
       {},
       (err, token) => {
         if (err) {
