@@ -1,4 +1,4 @@
-# Invoice Generator Application
+# Levitation infotech
 
 This application is a user-friendly and user can select product and download the invoice of the price.
 
