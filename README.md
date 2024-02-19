@@ -17,6 +17,9 @@ This application is a user-friendly and user can select product and download the
    
 ## Install dependencies:
    `npm install`
+
+## Change axios path in app.tsx
+   `axios.defaults.baseURL = "http://localhost:3000";`
    
 ## Start the development server:
    `npm run dev`
@@ -28,6 +31,15 @@ This application is a user-friendly and user can select product and download the
    
 ## Install dependencies:
    `npm install`
+
+## Change cors path in serve.js
+   `app.use(
+  cors({
+    credentials: true,
+    origin: "http://localhost:5173",
+  })
+);
+`
    
 ## Start the development server:
    `npm run dev`
