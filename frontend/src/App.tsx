@@ -9,7 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { UserContextProvider } from "../context/userContext";
 import ProductDetails from "./pages/ProductDetails";
 
-axios.defaults.baseURL = "levitation-hazel.vercel.app";
+axios.defaults.baseURL = "https://levitaion-frontend.vercel.app";
 axios.defaults.withCredentials = true;
 
 function App() {
