@@ -12,7 +12,7 @@ const {
 router.use(
   cors({
     credentials: true,
-    origin: ["https://levitation.vercel.app"],
+    origin: [""],
     methods:["POST","GET","PUT"],
   })
 );
