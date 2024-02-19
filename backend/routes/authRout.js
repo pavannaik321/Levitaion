@@ -12,7 +12,8 @@ const {
 router.use(
   cors({
     credentials: true,
-    origin: "http://localhost:5173",
+    origin: ["https://deploy-mern-1whq.vercel.app"],
+    methods:["POST","GET","PUT"],
   })
 );
 
