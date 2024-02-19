@@ -15,7 +15,11 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
 // Use the CORS middleware
-app.use(cors());
+app.use(cors({
+    credentials: true,
+    origin: ["https://levitaion-frontend.vercel.app"],
+    methods:["POST","GET","PUT"],
+  }));
 
 app.use("/", require("./routes/authRout"));
 app.use("/product", require("./routes/productRout"));
