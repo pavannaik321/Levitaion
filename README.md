@@ -7,11 +7,13 @@ This application is a user-friendly Invoice Generator that allows users to creat
 1. Install Node.js (https://nodejs.org/).
 2. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/invoice-generator.git
+   
+   git clone https://github.com/pavannaik321/Levitaion.git
 
 ##  Navigate to the project directory:
    cd invoice-generator
 ## Install dependencies:
+   ```bash
    npm install
 ## Start the development server:
    npm run dev
