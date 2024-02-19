@@ -9,15 +9,15 @@ This application is a user-friendly Invoice Generator that allows users to creat
    ```bash
    git clone https://github.com/your-username/invoice-generator.git
 
-1. Navigate to the project directory:
+##  Navigate to the project directory:
    cd invoice-generator
-2. nstall dependencies:
+## Install dependencies:
    npm install
-3. Start the development server:
+## Start the development server:
    npm run dev
 
 
-Usage
+## Usage
 1. Open your web browser and navigate to http://localhost:3000.
 2. Fill in the invoice details (e.g., customer name, items, total amount).
 3. Click the "Generate Invoice" button to create the invoice.
