@@ -63,18 +63,24 @@ const Home = () => {
   };
 
   return (
-    <div className="cards">
+    <div className="flex flex-wrap justify-center">
       {product.map((ele) => (
-        <div key={ele._id} className="card">
-          <h3 className="Product_name">{ele.product_name}</h3>
-          <span>
-            <p>{ele.product_rate}</p>Rs
-          </span>
+        <div
+          key={ele._id}
+          className="bg-gray-100 rounded-lg shadow-md m-2 p-4 text-center w-52"
+        >
+          <h3 className="text-gray-800 text-lg font-semibold">
+            {ele.product_name}
+          </h3>
+          <div className="flex items-center justify-center">
+            <p className="mr-1">{ele.product_rate}</p>
+            <span>Rs</span>
+          </div>
           <button
             onClick={() => {
               AddItem(ele._id, ele.product_name);
             }}
-            className="button"
+            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mt-2 transition-colors"
           >
             Add
           </button>

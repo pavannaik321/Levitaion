@@ -1,10 +1,8 @@
-import React, { useState } from "react";
+import { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import "./Navbar.css";
 import { useNavigate, useLocation } from "react-router-dom";
 import { UserContext } from "../../context/userContext";
-import { useContext } from "react";
 
 const Navbar = () => {
   const { cartItem } = useContext(UserContext);
@@ -18,27 +16,51 @@ const Navbar = () => {
     buttonPath = "/";
   }
 
+  if (location.pathname === "/login" || location.pathname === "/register") {
+    return null;
+  }
+
   return (
-    <nav className="navbar">
-      <div className="logo-container">
+    <nav className="bg-gray-800 text-white flex flex-wrap justify-between items-center py-2 px-4 mb-8">
+      <div className="flex items-center">
         <img
-          className="logo"
+          className="h-10 w-auto filter invert mr-4"
           src="https://levitation.in/wp-content/uploads/2023/04/levitation-Infotech.png"
           alt="no image"
         />
-      </div>
-      <div className="buttons-container">
-        <div className="cart-icon">
+        <div className="relative cursor-pointer mr-4">
           <FontAwesomeIcon icon={faShoppingCart} />
-          {cartItem > 0 && <span className="cart-count">{cartItem}</span>}
+          {cartItem > 0 && (
+            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+              {cartItem}
+            </span>
+          )}
         </div>
+      </div>
+      <div className="flex items-center">
         <button
           onClick={() => {
             navigate(buttonPath);
           }}
-          className="button"
+          className="bg-white text-gray-800 px-4 py-2 rounded-lg mr-4"
         >
           {buttonText}
+        </button>
+        <button
+          onClick={() => {
+            navigate("/login");
+          }}
+          className="bg-white text-gray-800 px-4 py-2 rounded-lg mr-4"
+        >
+          Login
+        </button>
+        <button
+          onClick={() => {
+            navigate("/register");
+          }}
+          className="bg-white text-gray-800 px-4 py-2 rounded-lg"
+        >
+          Register
         </button>
       </div>
     </nav>
