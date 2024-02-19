@@ -18,7 +18,7 @@ type Product = {
 };
 
 const Home = () => {
-  const { cartItem, setCartItem } = useContext(UserContext);
+  const {  setCartItem } = useContext(UserContext);
   const navigate = useNavigate();
   const [user, setUser] = useState<Profile | null>(null);
   const [product, setProduct] = useState<Product[]>([]);
