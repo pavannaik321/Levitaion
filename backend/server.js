@@ -14,7 +14,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: false }));
 
-// app.use(cors());
+// Use the CORS middleware
+app.use(cors());
 
 app.use("/", require("./routes/authRout"));
 app.use("/product", require("./routes/productRout"));
