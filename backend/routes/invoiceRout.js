@@ -7,7 +7,7 @@ const { InvoiceDetails } = require("../controllers/InvoiceController");
 router.use(
   cors({
     credentials: true,
-    origin: ["https://levitaion-frontend.vercel.app/"],
+    origin: ["https://levitaion-backend.vercel.app"],
     methods:["POST","GET","PUT"],
   })
 );
