@@ -6,13 +6,13 @@ const {
   addProducts,
 } = require("../controllers/productController");
 
-router.use(
-  cors({
-    credentials: true,
-    origin: ["https://levitaion-frontend.vercel.app"],
-    methods:["POST","GET","PUT"],
-  })
-);
+// router.use(
+//   cors({
+//     credentials: true,
+//     origin: ["https://levitaion-frontend.vercel.app"],
+//     methods:["POST","GET","PUT"],
+//   })
+// );
 router.get("/", getProducts);
 router.put("/addproduct", addProducts);
 
